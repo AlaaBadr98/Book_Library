@@ -1,0 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Gideon+Roman&family=Open+Sans+Condensed:wght@300&family=Poppins:wght@200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;1,500&display=swap');
+
+.background{
+    filter: blur(3px);
+    width: 100%;
+}
+
+.loginContainer{
+    position: absolute;
+    
+     width: 30vw;
+     height: 30vw;
+     background-color: #ffff;
+     border-radius: 2em;
+
+}
