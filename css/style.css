@@ -105,11 +105,17 @@ h1 {
 .header_img{
     width: 100%;
     position: absolute;
-    height: 33em;
+    height: 100%;
     object-fit: cover;
+    top: 0;
 }
   .webName{
     display: flex;
+    position: relative;
+    color: #8d6909;
+    backdrop-filter: blur(8px);
+    border-radius: 43px;
+    padding: 2%;
     align-self: self-start;
     margin: 5%;
     font-size: 6em;
@@ -150,17 +156,22 @@ h1 {
     font-weight: bold;
 }
 .menuButton:hover{
- color: #fff;
+    color: #906b0b;
+    background-color: #fff;
+    border-color: #906b0b;
 }
 @media (max-width:768px) {
     .menuButton{
         display: none;
     }
+    .webName{
+        font-size: 4em;
+    }
     .footer{
         flex-direction: column !important;
     }
     .userName{
-        margin-right: 10%;
+        margin-right: 5%;
     }
   .navBar{
       display: block  !important;
@@ -175,7 +186,7 @@ h1 {
     justify-content: flex-end;
 }
 .header .links .icon span{
-    background-color: #333;
+    background-color: #c38d30;
     margin-bottom: 5px;
     height: 2px;
 }
@@ -196,7 +207,7 @@ h1 {
    display: block;
    padding: 15px;
    text-decoration: none;
-   color: #333;
+   color: #c38d30;
    transition:0.3s ;
 }
 .header .links ul li :hover{
@@ -205,6 +216,24 @@ h1 {
 .header .links ul li:not(:last-child) a {
    border-bottom : 1px solid #ddd ;
 }
+    
+}
+@media (max-width:456px) {
+    .webName{
+        font-size: 2em;
+    }
+    .header{
+        height: 20em;
+    }
+    
+}
+@media (max-width:280px) {
+    .header{
+        width: 280px;
+    }
+    .team{
+        font-size: 1em !important;
+    }
     
 }
 /********* nav bar *********/
@@ -230,18 +259,14 @@ h1 {
 /***** footer *********/
 .footer{
     display: flex;
+    position: relative;
     background-color: #06192b;
     flex-direction: row;
     box-shadow: 0px 0px 30px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    position: relative;
     bottom: 0%;
-}
-
-.webName-footer{
-    width: 12em;
-    padding: 15%;
+    width: 100%;
 }
 .names{
     display: flex;
@@ -251,18 +276,13 @@ h1 {
     color: #fff;
 }
 .names div{
-    color: #e5d549;
+    color: #c38d30;
     font-size: 1.5rem;
 }
 .team{
     width: 14em;
     text-align: center;
-    font-size: 1.1rem;
-}
-@media (max-width:812px) {
-    .userName{
-    margin-right: 0;
-    }
+    font-size: 1.5em;
 }
 @media (max-width:337px) {
     .homePage{
@@ -270,6 +290,50 @@ h1 {
     }
     
 }
+.contant{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon a{
+    display: inline-block;
+    font-size:1em;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #c38d30;
+    transition: .4s linear;
+    position: relative;
+  }
+  
+  .icon a::before, .icon a::after{
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: .4s linear;
+  }
+  
+  .icon a:hover{
+    transform: scale(.8);
+  }
+  
+  .icon a:hover::before{
+    border-left: 4px solid;
+    border-right: 4px solid;
+    transform: skewX(20deg);
+  }
+  
+  .icon a:hover::after{
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    transform: skewY(-20deg);
+  }
+
 
 /********* End Home Page *******/
 /*******************************/

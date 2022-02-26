@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,9 @@
     <title>Books Library </title>
     <link rel="icon" href="images/icons8-books-64.png" type="image/x-icon">
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
 </head>
+
 <body>
     <div class="homePage">
         <div class="header">
@@ -15,40 +18,63 @@
             <div class="webName">Book To Know</div>
             <div class="menuContainer">
                 <label class="userName" id="name"> Gust</label>
-               <a href="" style="display: block;"> <button class="menuButton" id="allBooks">All Books</button></a>
-               <a href=""style="display: block;" >  <button class="menuButton" id="addBook">Add Book</button></a>
-               <a href=""style="display: block;" ><button class="menuButton" id="logoutButton">Logout</button></a>
+                <a href="" style="display: block;"> <button class="menuButton" id="allBooks">All Books</button></a>
+                <a href="" style="display: block;"> <button class="menuButton" id="addBook">Add Book</button></a>
+                <a href="login.html" style="display: block;"><button class="menuButton" id="logoutButton">Logout</button></a>
 
-            <div class="links navBar" id="showNav">
-                <span class="icon">
-                <span></span>
-                <span></span>
-                <span></span>
-               </span>
-                   <ul id="showing">
-                 <li><a href="">All Books</a></li>
-                 <li><a href=""> Add Book </a></li>
-                 <li><a href=""> Logout </a></li>
-                </ul>
-             </div>
-            </div>     
-              </div>
-        </div> 
-
-        
-        <div class="footer">
-            <div class="image">
-                <img class="webName-footer" src="../images/website name.png">
+                <div class="links navBar" id="showNav">
+                    <span class="icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <ul id="showing">
+                        <li><a href="">All Books</a></li>
+                        <li><a href=""> Add Book </a></li>
+                        <li><a href="login.html"> Logout </a></li>
+                    </ul>
+                </div>
             </div>
+        </div>
+        <div class="footer">
             <div class="names">
                 <div>
                     Created By
                 </div>
                 <p class="team">
-                    Alaa Osama Mohammed<br>Nouran Ebrahim Elmohamedy<br>Mahmoud Sameh Mohammed<br>Mohammed Tareq Tolba
+                    Alaa Osama Mohammed
                 </p>
+                <div class="contant">
+                    <div class="icon">
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+
+                </div>
 
             </div>
+        </div>
+
+
+
     </div>
+
+    <script>
+        var show = document.getElementById("showNav");
+        var showing = document.getElementById("showing");
+        var i = 0;
+        show.addEventListener("click", () => {
+            if (i === 0) {
+                showing.style.display = "block"
+                i = 1
+            } else {
+                showing.style.display = "none"
+                i = 0
+            }
+
+        })
+    </script>
 </body>
+
 </html>
