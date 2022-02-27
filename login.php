@@ -17,7 +17,7 @@
         <h1>
             Welcome to Book Library
         </h1>
-        <form class="formContainer" action="check.php" method="post"> 
+        <form class="formContainer" action="connect.php" method="post"> 
             <div>
         <label for="name">Name</label>
         <input class="input" type="text" name="name" placeholder="Name" required><br>
