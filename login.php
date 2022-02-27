@@ -36,10 +36,11 @@
         <i class="fas fa-eye" onclick="see()"></i>
     </div>
 
-        <input type="submit" id="Login" name="Login" value="Login" class="loginButton">
+        <input type="submit" id="in" name="Login" value="Login" class="loginButton">
+        
         </form>
     </div>
-
+    <script src="js/home.js"></script>
 </body>
 
 </html>
