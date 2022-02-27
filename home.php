@@ -17,9 +17,11 @@
             <img src="images/pexels-janko-ferlic-590493.jpg" class="header_img">
             <div class="webName">Book To Know</div>
             <div class="menuContainer">
-                <a href="" style="display: block;"> <button class="menuButton" id="allBooks">All Books</button></a>
-                <a href="add_Book.php" style="display: block;"> <button class="menuButton" id="addBook">Add Book</button></a>
-                <a href="login.php" style="display: block;"><button class="menuButton" id="logoutButton">Logout</button></a>
+                <a href="updating.php" style="display: block;"> <button class="menuButton" id="allBooks">Edit Book</button></a>
+                <a href="add_Book.php" style="display: block;"> <button class="menuButton" id="addBook">Add
+                        Book</button></a>
+                <a href="login.php" style="display: block;"><button class="menuButton"
+                        id="logoutButton">Logout</button></a>
 
                 <div class="links navBar" id="showNav">
                     <span class="icon">
@@ -28,13 +30,25 @@
                         <span></span>
                     </span>
                     <ul id="showing">
-                        <li><a href="">All Books</a></li>
+                        <li><a href="updating.php">Edit Book</a></li>
                         <li><a href="add_Book.php"> Add Book </a></li>
                         <li><a href="login.php"> Logout </a></li>
                     </ul>
                 </div>
             </div>
         </div>
+        <div class="homeContainer">
+
+            <form method="post">
+                <input class="search" type="text" name="search" placeholder="Search" required>
+
+            </form>
+     <div class="bookshow">
+
+</div>
+        
+        </div>
+
         <div class="footer">
             <div class="names">
                 <div>

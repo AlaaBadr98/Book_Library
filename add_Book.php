@@ -22,7 +22,7 @@
             Add New Book
         </h1>
 </div>
-        <form class="addForm" method="post" id="addForm"> 
+        <form class="addForm" method="post" id="addForm" action="adding.php"> 
             <div class="addip">
 <div>
         <label for="number">Number</label>

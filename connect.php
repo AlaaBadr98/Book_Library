@@ -1,38 +1,39 @@
 <?php
+$nameip=$_POST['name'];
+$emailip=$_POST['email'];
+$passip=$_POST['pass'];
+$logasip=$_POST['logAs'];
+
 $servername = "localhost";
 $username = "root";
 $password = "";
+$dbname = "book_library";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
-
+$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully";
-                // $name = $_POST['name'];
-                // $email = $_POST['email'];
-                // $pass = $_POST['pass'];
 
-                //     $conn=mysqli_connect("localhost"."root","");
-                //     $db=mysqli_select_db($conn,"book_library");
+$sql = "SELECT id, name , email , password FROM admin";
+$result = $conn->query($sql);
 
-                //  if(isset($_POST['login']))
-                //  {
-                //      $query_run=mysqli_query($conn,"INSERT INTO `admin`(`id`, `name`, `email`, `password`) VALUES ('2','$name','$email','$pass')");
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    if(($logasip==="admin") &&($nameip=== $row["name"]) && ($emailip==$row["email"]) && ($passip==$row["password"])){
+      header("location:home.php");
+            exit();
+    }
+    else{
+      echo '<script>alert("Your Not an admin Or check your inputs right")</script>';
+      header("REFRESH:0.5;URL=login.php");
+    }
+  }
+} else {
+  echo "0 results";
+}
 
-                //  }
-
-                //     $servername = "localhost";
-                //     $username = "root";
-                //     $password = "";
-                //     $dbname = "book_library";
-                //     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-                //     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-             
-                //     echo "<span class=\"error\">connected sucessfully</span>"; 
-                //  $adminName = $conn->query("INSERT INTO `admin`(`id`, `name`, `email`, `password`) VALUES ('1','$name','$email','$pass') ")->fetchAll(pdo::FETCH_COLUMN);  //one COLUMNS 
-                // 
-        
+$conn->close();
            ?>

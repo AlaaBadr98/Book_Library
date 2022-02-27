@@ -17,28 +17,26 @@
         <h1>
             Welcome to Book Library
         </h1>
-        <form class="formContainer" action="connect.php" method="post"> 
-            <div>
+        <form class="formContainer" action="connect.php" method="post">
+     <div>
+            <input type="radio" id="admin" name="logAs" value="admin" checked required>
+            <label for="admin"> Login as Admin</label><br>
+    </div>
+    <div>
         <label for="name">Name</label>
         <input class="input" type="text" name="name" placeholder="Name" required><br>
-</div>
-<div>
+    </div>
+    <div>
         <label for="email">Email</label>
-         <input class="input" type="text" name="email" placeholder="Email" required><br>
-</div>
-<div>
-     <label for="password"> Password</label>
-            <input  class="input" type="password" name="pass" placeholder="password" id="pass" required>
-            <i class="fas fa-eye" onclick="see()"></i>
-</div>
-<div>
-<label for="logas"> Login As</label><br>
-            <input type="radio" id="admin" name="logAs" value="admin" required>
-            <label for="admin"> Login as Admin</label><br>
-            <input type="radio" id="user" name="logAs" value="user" >
-            <label for="user"> Login as user</label><br>
-</div>
-         <input type="submit" id="Login" name="Login" value="Login"class="loginButton" >
+        <input class="input" type="text" name="email" placeholder="Email" required><br>
+    </div>
+    <div>
+        <label for="password"> Password</label>
+        <input class="input" type="password" name="pass" placeholder="password" id="pass" required>
+        <i class="fas fa-eye" onclick="see()"></i>
+    </div>
+
+        <input type="submit" id="Login" name="Login" value="Login" class="loginButton">
         </form>
     </div>
 
