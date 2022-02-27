@@ -17,10 +17,9 @@
             <img src="images/pexels-janko-ferlic-590493.jpg" class="header_img">
             <div class="webName">Book To Know</div>
             <div class="menuContainer">
-                <label class="userName" id="name"> Gust</label>
                 <a href="" style="display: block;"> <button class="menuButton" id="allBooks">All Books</button></a>
-                <a href="" style="display: block;"> <button class="menuButton" id="addBook">Add Book</button></a>
-                <a href="login.html" style="display: block;"><button class="menuButton" id="logoutButton">Logout</button></a>
+                <a href="add_Book.php" style="display: block;"> <button class="menuButton" id="addBook">Add Book</button></a>
+                <a href="login.php" style="display: block;"><button class="menuButton" id="logoutButton">Logout</button></a>
 
                 <div class="links navBar" id="showNav">
                     <span class="icon">
@@ -30,8 +29,8 @@
                     </span>
                     <ul id="showing">
                         <li><a href="">All Books</a></li>
-                        <li><a href=""> Add Book </a></li>
-                        <li><a href="login.html"> Logout </a></li>
+                        <li><a href="add_Book.php"> Add Book </a></li>
+                        <li><a href="login.php"> Logout </a></li>
                     </ul>
                 </div>
             </div>

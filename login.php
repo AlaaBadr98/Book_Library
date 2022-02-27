@@ -20,11 +20,11 @@
         <form class="formContainer" action="check.php" method="post"> 
             <div>
         <label for="name">Name</label>
-        <input class="input" type="text" name="name" placeholder="Name" require><br>
+        <input class="input" type="text" name="name" placeholder="Name" required><br>
 </div>
 <div>
         <label for="email">Email</label>
-         <input class="input" type="text" name="email" placeholder="Email" require><br>
+         <input class="input" type="text" name="email" placeholder="Email" required><br>
 </div>
 <div>
      <label for="password"> Password</label>
@@ -32,6 +32,7 @@
             <i class="fas fa-eye" onclick="see()"></i>
 </div>
 <div>
+<label for="logas"> Login As</label><br>
             <input type="radio" id="admin" name="logAs" value="admin" required>
             <label for="admin"> Login as Admin</label><br>
             <input type="radio" id="user" name="logAs" value="user" >
