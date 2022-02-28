@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $nameip=$_POST['name'];
 $emailip=$_POST['email'];
 $passip=$_POST['pass'];
@@ -23,7 +25,9 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
     if(($logasip==="admin") &&($nameip=== $row["name"]) && ($emailip==$row["email"]) && ($passip==$row["password"])){
-      header("location:home.php");
+      $_SESSION["user"] = 0;
+        $_SESSION["admin"] = 1;
+        header("REFRESH:0.5;URL=home.php");
             exit();
     }
     else{

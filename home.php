@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,10 +20,10 @@
             <img src="images/pexels-janko-ferlic-590493.jpg" class="header_img">
             <div class="webName">Book To Know</div>
             <div class="menuContainer">
-            <a href="login.php" style="display: block;" class="user"><button class="menuButton">Login</button></a>
+            <a href="login.php" style="display: block;" type="submit" name="login" class="user"><button class="menuButton">Login</button></a>
             <a href="updating.php" style="display: none;" class="admin"> <button class="menuButton" id="allBooks">Edit Book</button></a>
             <a href="add_Book.php" style="display: none;" class="admin"> <button class="menuButton" id="addBook">Add Book</button></a>
-            <a href="home.php" style="display: none;" id="out" class="admin"><button class="menuButton" id="logoutButton">Logout</button></a>
+            <a href="home.php" style="display: none;" id="out" class="admin" type="submit" name="logout" ><button class="menuButton" id="logoutButton">Logout</button></a>
 
                 <div class="links navBar" id="showNav">
                     <span class="icon">
@@ -37,14 +40,21 @@
                 </div>
             </div>
         </div>
+        <!-- code for menu button so after admin login show features like add-edit-delet -->
+        <?php
+        $_SESSION["user"]=1 ;
+        $_SESSION["admin"]=0;
+                    ?>
         <div class="homeContainer">
             
 
             <form class="searchsection" method="post" action="search.php">
                 <input class="search" type="text" name="search" placeholder="Search By book title" required>
                 <i type="submit" id="searchicon" class="fa fa-search"></i>
-
             </form>
+            <?php
+        $_SESSION["search"]=$_POST['search'] ;
+                    ?>
      <div class="bookshow">
 
 </div>
@@ -73,21 +83,6 @@
 
     </div>
 
-    <script>
-        var show = document.getElementById("showNav");
-        var showing = document.getElementById("showing");
-        var i = 0;
-        show.addEventListener("click", () => {
-            if (i === 0) {
-                showing.style.display = "block"
-                i = 1
-            } else {
-                showing.style.display = "none"
-                i = 0
-            }
-
-        })
-    </script>
      <script src="js/home.js"></script>
 </body>
 
