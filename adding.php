@@ -23,9 +23,12 @@ $sql= "INSERT INTO `books`(`id`, `title`, `auther`, `edition`, `submition`)
 VALUES ('$numip' , '$titleip' , '$autherip' , '$editionip' , '$submitionip')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "New records created successfully";
+  echo '<script>alert("New book created successfully")</script>';
+  header("REFRESH:0.5;URL=admin_home.php");
+
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+  echo '<script>alert("You entered book number using before")</script>';
+  header("REFRESH:0.5;URL=add_Book.php");
 }
 
 

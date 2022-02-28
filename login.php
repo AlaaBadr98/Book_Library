@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +17,9 @@
 
 <body class="container">
     <div class="mainContainer">
+    <div class="back">
+            <a href="user_home.php"><i class='fas fa-undo'></i></a>
+        </div>
         <h1>
             Welcome to Book Library
         </h1>

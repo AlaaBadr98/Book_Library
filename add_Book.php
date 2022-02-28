@@ -1,3 +1,12 @@
+<?php
+// check that you are admin 
+session_start();
+if (! isset($_SESSION['admin'])){
+    echo '<script>alert("You must login to access this page")</script>';
+    header("REFRESH:0.5;URL=login.php");
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +24,7 @@
 <body class="container">
     <div class="addContainer">
         <div class="back">
-            <a href="home.php"><i class='fas fa-undo'></i></a>
+            <a href="admin_home.php"><i class='fas fa-undo'></i></a>
         </div>
         <div class="title">
     <h1>
