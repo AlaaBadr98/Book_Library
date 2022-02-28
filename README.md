@@ -1,8 +1,9 @@
 # Book_Library
 
 Design and implement web application to manage Library with this features:
-first you must add the file of database in your data
-and set its name "book_library"
+
+------all data that i creat and use in folder "data information"
+----------first you must add the file of database in your data and set its name "book_library"
 and 
 $servername = "localhost";
 $username = "root";
